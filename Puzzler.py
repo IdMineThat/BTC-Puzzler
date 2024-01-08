@@ -2,11 +2,12 @@ import ecdsa
 import hashlib
 import base58
 import random
+import winsound
 
 def generate_random_hex():
     # Define the range of numbers
-    #lower_bound = 36893488147419103231
-    lower_bound = 56893488147419103231
+    lower_bound = 36893488147419103231
+    #lower_bound = 56893488147419103231
     upper_bound = 73786976294838206463
 
     # Generate a random number within the specified range
@@ -90,3 +91,7 @@ while balance == 0:
         f = open("Insert You File Path Here2.csv", "a")
         f.write(bitcoin_address + ',' + wif + ',' + private_key_hex + '\n')
         f.close()
+        yo = 0
+        while yo == 0:
+            winsound.Beep(440, 500) # frequency, duration
+            winsound.Beep(600, 500)
